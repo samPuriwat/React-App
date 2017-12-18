@@ -9,7 +9,7 @@ class App extends Component {
     return(
       <div>
             <Header/>
-            <Content/>
+            <Content title= "Course React" name="Puriwat" price="Free"/>
             <Footer/>
             
             
