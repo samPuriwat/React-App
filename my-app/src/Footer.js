@@ -5,6 +5,7 @@ class Footer extends Component{
       return(
         <div>
             <h3>CopyRight 2017 - React</h3>
+            <h1><a herf = "/">Home</a></h1>
         </div>
       );
     }
