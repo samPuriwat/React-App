@@ -13,6 +13,7 @@ class App extends Component {
   };
   this.changeMessage = this.changeMessage.bind(this);
   this.insertData = this.insertData.bind(this);
+  this.onChange = this.onChange.bind(this);
 }
 
 changeMessage(){
@@ -25,6 +26,9 @@ insertData(){
   this.setState({data:myArray })
 
 }
+onChange(event){
+  this.setState({type:event.target.value})
+}
   render(){
     
     return(
@@ -35,7 +39,9 @@ insertData(){
             <h1>{this.state.message}</h1>
             <button onClick = {this.changeMessage}>{this.state.message} </button><br/>
             <h1>{this.state.data}</h1>
-            <button onClick = {this.insertData}>Insert</button>
+            <button onClick = {this.insertData}>Insert</button><br/><br/>
+            <input type="text" onChange={this.onChange}/>
+            <h1>Welcome: {this.state.type}</h1>
           
 
       </div>
